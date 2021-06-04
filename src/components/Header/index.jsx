@@ -3,12 +3,6 @@ import { useLocation, Link, NavLink } from 'react-router-dom';
 import { useIsMobileUI } from '../../constant/RwdContext';
 import { useLang, useLangUpdate, useLangTrans, useLangList } from '../../constant/LangContext';
 
-import { gsap } from "gsap";
-import TextPlugin from 'gsap/TextPlugin'
-import { ExpoScaleEase, RoughEase, SlowMo } from "gsap/EasePack";
-
-gsap.registerPlugin(TextPlugin, ExpoScaleEase, RoughEase, SlowMo);
-
 import logo from '../../assets/images/logo.svg';
 import hamburger from '../../assets/images/hamburger.svg';
 
@@ -27,7 +21,7 @@ const Header = () => {
     const langList = useLangList();
 
     return (
-        <header className='w-full bg-blue flex-center sticky top-0 z-30 py-4'>
+        <header className='w-full h-24 md:h-20 bg-blue flex-center fixed top-0 left-0 z-30'>
             <div className='max-w-92 laptop:max-w-1280 w-full laptop:w-11/12 flex justify-between items-center'>
                 <div className='flex items-center'>
                     {/* LOGO */}

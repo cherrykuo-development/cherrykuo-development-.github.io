@@ -28,6 +28,23 @@ const en = {
             'If you find a path with no obstacles,',
             'it probably doesn’t lead anywhere.',
         ],
+        experience: {
+            title: 'experience',
+            period: {
+                years: 'years',
+                months: 'months',
+            },
+            company: [
+                {
+                    name: 'Design Outsourcing Company, Taipei, Taiwan',
+                    period: '2020/11 ~ 2021/05',
+                },
+                {
+                    name: 'United China Air Freight Co., Ltd. Taipei, Taiwan',
+                    period: '2016/08 ~ 2020/10',
+                },
+            ],
+        },
     },
 };
 

@@ -47,7 +47,7 @@ module.exports = {
                 dark: '',
             },
             grey: {
-                light: '#eeeeee',
+                light: '#FBFBFD',
                 DEFAULT: '#6d6d6d',
                 dark: '#282c34',
             },
@@ -74,8 +74,12 @@ module.exports = {
                 92: '92%',
                 1280: '1280px',
             },
-             height: {
-                '28': '7rem',
+            height: {
+                28: '7rem',
+                180: '45rem',
+            },
+            padding: {
+                15: '3.75rem',
             },
         },
     },

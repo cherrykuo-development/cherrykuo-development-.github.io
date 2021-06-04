@@ -33,7 +33,7 @@ const Routes = props => {
     };
 
     return (
-        <TransitionGroup className='w-full' style={{ height: 'calc(100% - 5rem)' }}>
+        <TransitionGroup className='w-full mt-24 laptop:mt-20'>
             <Transition timeout={400} key={props.location.pathname} onEnter={onEnterHandler}>
                 <Switch>
                     <Route path='/frontend'>
