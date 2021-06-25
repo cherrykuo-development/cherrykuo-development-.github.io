@@ -120,6 +120,9 @@ const tw = {
                 ],
             },
         },
+        backend: {
+            page_title: '後端技能',
+        },
     },
 };
 

@@ -137,6 +137,9 @@ const en = {
                 ],
             },
         },
+        backend: {
+            page_title: 'BACK-END',
+        },
     },
 };
 

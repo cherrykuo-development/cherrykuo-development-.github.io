@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 
 import Home from '../pages/Home';
 import FrontEnd from '../pages/FrontEnd';
+import BackEnd from '../pages/BackEnd';
 
 // const completeCall = target => {
 //     gsap.set(target, { clearProps: 'position' });
@@ -36,6 +37,9 @@ const Routes = props => {
         <TransitionGroup className='w-full mt-24 md:mt-20'>
             <Transition timeout={400} key={props.location.pathname} onEnter={onEnterHandler}>
                 <Switch>
+                    <Route path='/backend'>
+                        <BackEnd />
+                    </Route>
                     <Route path='/frontend'>
                         <FrontEnd />
                     </Route>

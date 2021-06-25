@@ -12,7 +12,7 @@ const SVG_Sass = () => {
         };
         const scrollTrigger = {
             trigger: section.current,
-            start: 'top 60%',
+            start: 'top 50%',
             end: 'bottom top',
             toggleActions: 'restart none none reverse',
         };
