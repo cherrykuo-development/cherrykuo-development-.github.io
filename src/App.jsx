@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Routes from './routes';
 
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const App = () => {
     return (
@@ -10,6 +11,7 @@ const App = () => {
             <Router>
                 <Header />
                 <Route path='/' component={Routes} />
+                <Footer />
             </Router>
         </div>
     );

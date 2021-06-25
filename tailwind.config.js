@@ -13,8 +13,10 @@ module.exports = {
             rem18: 18 / 16 + 'rem',
             rem24: 24 / 16 + 'rem',
             rem28: 28 / 16 + 'rem',
+            rem32: 32 / 16 + 'rem',
             rem36: 36 / 16 + 'rem',
             rem48: 48 / 16 + 'rem',
+            rem64: 64 / 16 + 'rem',
             rem72: 72 / 16 + 'rem',
             16: '16px',
             18: '18px',
@@ -61,13 +63,20 @@ module.exports = {
                 DEFAULT: '#ff0000',
             },
         },
-        borderWidth: {
-            DEFAULT: '1px',
-        },
         extend: {
+            minWidth: {
+                36: '36px',
+            },
             width: {
+                100: '25rem',
                 105: '26.25rem',
+                120: '30rem',
+                130: '32.5rem',
+                150: '37.5rem',
+                160: '40rem',
                 256: '64rem',
+                260: '65rem',
+                280: '70rem',
                 '1/8': (1 / 8) * 100 + '%',
             },
             maxWidth: {
@@ -76,15 +85,40 @@ module.exports = {
             },
             height: {
                 28: '7rem',
+                135: '33.75rem',
                 180: '45rem',
+                220: '55rem',
+                288: '72rem',
             },
             padding: {
                 15: '3.75rem',
+                38: '9.5rem',
+            },
+            borderWidth: {
+                DEFAULT: '1px',
+                5: '5px',
+                10: '10px',
+                15: '15px',
+                20: '20px',
+            },
+            keyframes: {
+                wave: {
+                    '0%, 100%': { transform: 'translateY(0px)' },
+                    '50%': { transform: 'translateY(25px)' },
+                },
+            },
+            animation: {
+                'wave-loop': 'wave 4s ease-in-out infinite alternate',
             },
         },
     },
     variants: {
-        extend: {},
+        extend: {
+            fontWeight: ['responsive', 'group-hover'],
+            padding: ['responsive', 'group-hover', 'hover'],
+            borderWidth: ['responsive', 'group-hover'],
+            scale: ['group-hover'],
+        },
     },
     plugins: [],
 };

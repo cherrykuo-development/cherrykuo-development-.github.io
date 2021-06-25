@@ -34,4 +34,8 @@ body {
 
 body * {
     font-family: 'Noto Sans TC', 'Roboto', sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }

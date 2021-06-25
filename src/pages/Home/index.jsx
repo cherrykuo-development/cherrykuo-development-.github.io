@@ -1,30 +1,23 @@
-import React, { useEffect, useRef } from 'react';
-import { useLangTrans } from '../../constant/LangContext';
+import React from 'react';
 
 import MainView from '../../components/Home/MainView';
+import Proverb001 from '../../components/Home/Proverb001';
 import Experience from '../../components/Home/Experience';
+import Skills from '../../components/Home/Skills';
+import Responsibilities from '../../components/Home/Responsibilities';
+import Projects from '../../components/Home/Projects';
+import Proverb002 from '../../components/Home/Proverb002';
 
 const Home = () => {
-    const langTrans = useLangTrans();
-
-    useEffect(() => {}, []);
-
     return (
         <>
             <MainView />
-            <section className='w-full bg-blue py-20 flex-center'>
-                <div className='max-w-1280 w-11/12 h-full space-y-6'>
-                    {langTrans('proverb001', { returnObjects: true }).map(item => (
-                        <div
-                            key={item}
-                            className='text-rem36 font-700 leading-tight tracking-wider text-white text-base'
-                        >
-                            {item}
-                        </div>
-                    ))}
-                </div>
-            </section>
+            <Proverb001 />
             <Experience />
+            <Skills />
+            <Responsibilities />
+            <Projects />
+            <Proverb002 />
         </>
     );
 };

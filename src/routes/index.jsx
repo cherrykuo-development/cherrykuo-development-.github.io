@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import { TransitionGroup, Transition } from 'react-transition-group';
 import { gsap } from 'gsap';
 
@@ -33,7 +33,7 @@ const Routes = props => {
     };
 
     return (
-        <TransitionGroup className='w-full mt-24 laptop:mt-20'>
+        <TransitionGroup className='w-full mt-24 md:mt-20'>
             <Transition timeout={400} key={props.location.pathname} onEnter={onEnterHandler}>
                 <Switch>
                     <Route path='/frontend'>

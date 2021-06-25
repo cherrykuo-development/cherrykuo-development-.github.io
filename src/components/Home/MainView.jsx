@@ -1,10 +1,13 @@
 import React, { useEffect, useRef } from 'react';
+import { useIsMobileUI } from '../../constant/RwdContext';
 import { useLangTrans } from '../../constant/LangContext';
 import { gsap } from '../../constant/gsap';
 
-import SVG_rwd from '../../components/Home/SVG_rwd';
+import PageTitle from '../PageTitle';
+import SVG_MainView from './SVG_MainView';
 
 const MainView = () => {
+    const isMobileUI = useIsMobileUI();
     const langTrans = useLangTrans();
     const mainViewMask = useRef(null);
     const data_cursor = useRef(null);
@@ -59,31 +62,30 @@ const MainView = () => {
     }, []);
     return (
         <section
-            className='w-full bg-grey-light py-20 flex-center'
-            style={{ height: 'calc(100vh - 5rem)' }}
+            className='w-full bg-grey-light py-10 laptop:py-20 flex-center'
+            style={{ height: isMobileUI ? '66rem' : 'calc(100vh - 5rem)' }}
         >
-            <div className='max-w-1280 w-11/12 h-full flex bg-blue pl-20 pr-5 relative'>
-                <div className='w-full bg-white px-20 pt-20 pb-10 flex justify-center align-top'>
+            <div className='max-w-1280 w-11/12 h-full flex bg-blue pl-20 pr-5 relative rounded-3xl overflow-hidden'>
+                <div
+                    className='w-full bg-white px-10 laptop:px-20 pt-20 pb-10 flex justify-center align-top border-5 laptop:border-10 border-blue'
+                    style={{ borderStyle: 'dashed none' }}
+                >
                     <div className='w-256 leading-normal tracking-wider text-base relative'>
                         <figure className='w-105 absolute bottom-0 right-0'>
-                            <SVG_rwd />
+                            <SVG_MainView />
                         </figure>
-                        <div className='absolute top-0 left-0'>
-                            <div className='inline-block bg-blue rounded-2xl mb-10 px-10 box-shadow'>
-                                <h1 className='text-rem72 font-900 text-white'>
-                                    {langTrans('web_title')}
-                                </h1>
-                            </div>
-                            <div className='text-rem36 font-700 text-grey mb-10'>
-                                {langTrans('front_end')}
-                            </div>
-                            <div className='text-rem36 font-700 text-grey'>
-                                {langTrans('coding_life')}
-                            </div>
-                            <div className='text-rem36 font-700 text-grey'>
-                                <span ref={date_from}></span>
-                                <span ref={date_to}></span>
-                                <span ref={data_cursor}>_</span>
+                        <div className='absolute top-0 left-0 space-y-20'>
+                            <PageTitle title={langTrans('web_title')} />
+                            <div className='text-rem48 laptop:text-rem36 font-700 text-grey space-y-10'>
+                                <div>{langTrans('professional_title')}</div>
+                                <div>
+                                    <div>{langTrans('coding_life')}</div>
+                                    <div>
+                                        <span ref={date_from}></span>
+                                        <span ref={date_to}></span>
+                                        <span ref={data_cursor}>_</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
