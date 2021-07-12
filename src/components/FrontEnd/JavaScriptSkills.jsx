@@ -24,14 +24,14 @@ const Item = ({ item, index }) => {
 
                 <div className='w-full laptop:w-160 flex flex-col justify-center space-y-10'>
                     <div className='flex-center'>
-                        <span className='text-rem48 font-500 tracking-wider text-white text-base uppercase px-20 bg-blue box-shadow rounded-xl'>
+                        <span className='text-rem48 font-500 tracking-wider text-white text-base px-20 bg-blue box-shadow rounded-xl'>
                             {item.title}
                         </span>
                     </div>
                     <ul className='space-y-3'>
                         {item.contents.map(content => (
                             <li key={content} className='flex-center'>
-                                <span className='text-rem28 laptop:text-rem32 font-500 tracking-wider text-black text-base uppercase'>
+                                <span className='text-rem28 laptop:text-rem32 font-500 tracking-wider text-black text-base'>
                                     # {content}
                                 </span>
                             </li>

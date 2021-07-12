@@ -139,6 +139,86 @@ const en = {
         },
         backend: {
             page_title: 'BACK-END',
+            main_view: {
+                sql: ['create', 'retrieve', 'update', 'delete'],
+            },
+            php_framework: {
+                title: 'PHP framework',
+                list: [
+                    {
+                        title: 'LARAVEL',
+                        contents: ['Blade Templates', 'Model、View and Controller'],
+                    },
+                    {
+                        title: 'SMARTY',
+                        contents: ['PHP Template Engine', 'separates PHP from HTML'],
+                    },
+                ],
+            },
+            php_library: {
+                title: 'PHP library',
+                list: [
+                    {
+                        title: 'TCPDF',
+                        contents: [
+                            'PHP class for generating PDF documents',
+                            'complete support for UTF-8 Unicode',
+                        ],
+                    },
+                    {
+                        title: 'PHPMAILER',
+                        contents: [
+                            'email creation and transfer class for PHP',
+                            'HTML messages, and attachments',
+                        ],
+                    },
+                ],
+            },
+        },
+        others: {
+            page_title: 'OTHERS',
+            git: {
+                title: 'GIT',
+                list: [
+                    {
+                        title: 'GIT',
+                        contents: [
+                            'distributed version control system',
+                            'convenient staging areas and multiple workflows',
+                        ],
+                    },
+                ],
+            },
+            google_apps_script: {
+                title: 'Google Apps Script',
+                list: [
+                    {
+                        title: 'Google Apps Script',
+                        contents: [
+                            'Use popular web languages',
+                            'Scale your productivity',
+                            'Built for Google',
+                        ],
+                    },
+                    {
+                        title: 'Data analysis',
+                        contents: ['SQL', 'Google SHEETS', 'Google data studio'],
+                    },
+                ],
+            },
+            ui_ux: {
+                title: 'UI / UX',
+                list: [
+                    {
+                        title: 'UI / UX',
+                        contents: ['User interface design', 'User Experience Design'],
+                    },
+                    {
+                        title: 'Figma',
+                        contents: ['Wireframe', 'Mockup', 'prototype'],
+                    },
+                ],
+            },
         },
     },
 };

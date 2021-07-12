@@ -14,7 +14,7 @@ const tw = {
                 url: '/backend',
             },
             {
-                text: '其他',
+                text: '其他技能',
                 url: '/others',
             },
         ],
@@ -122,6 +122,73 @@ const tw = {
         },
         backend: {
             page_title: '後端技能',
+            main_view: {
+                sql: ['插入', '查詢', '更新', '刪除'],
+            },
+            php_framework: {
+                title: 'PHP 框架',
+                list: [
+                    {
+                        title: 'LARAVEL',
+                        contents: ['Blade 樣版', '模型、視圖和控制器'],
+                    },
+                    {
+                        title: 'SMARTY',
+                        contents: ['PHP 的網頁模板引擎', '將 HTML 碼與 PHP 程式碼分離'],
+                    },
+                ],
+            },
+            php_library: {
+                title: 'PHP 函式庫',
+                list: [
+                    {
+                        title: 'TCPDF',
+                        contents: ['用於生成 PDF 文檔的 PHP class', '完整支持 UTF-8'],
+                    },
+                    {
+                        title: 'PHPMAILER',
+                        contents: ['PHP 電子郵件創建和傳輸 class', 'HTML 訊息和附件'],
+                    },
+                ],
+            },
+        },
+        others: {
+            page_title: '其他技能',
+            git: {
+                title: 'GIT',
+                list: [
+                    {
+                        title: 'GIT',
+                        contents: ['分佈式版本控制系統', '方便的暫存區和多個工作流等功能'],
+                    },
+                ],
+            },
+            google_apps_script: {
+                title: 'Google Apps Script',
+                list: [
+                    {
+                        title: 'Google Apps Script',
+                        contents: ['使用常用的網頁程式語言', '提高生產力', '專為 Google 打造'],
+                    },
+                    {
+                        title: '數據分析',
+                        contents: ['SQL', 'Google 試算表', 'Google data studio'],
+                    },
+                ],
+            },
+            ui_ux: {
+                title: 'UI / UX',
+                list: [
+                    {
+                        title: 'UI / UX',
+                        contents: ['使用者介面設計', '使用者經驗設計'],
+                    },
+                    {
+                        title: 'Figma',
+                        contents: ['線框圖', '視覺稿', '原型'],
+                    },
+                ],
+            },
         },
     },
 };

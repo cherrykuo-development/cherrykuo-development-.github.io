@@ -7,7 +7,7 @@ const SectionTitle = ({ title, color }) => {
                 className={
                     'text-rem64 font-700 tracking-wider ' +
                     ('text-' + color) +
-                    ' text-base uppercase border-b-2 laptop:border-b-5 border-solid ' +
+                    ' text-base border-b-2 laptop:border-b-5 border-solid ' +
                     ('border-' + color) +
                     ' pb-3'
                 }

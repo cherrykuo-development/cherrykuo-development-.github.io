@@ -10,11 +10,11 @@ const MainView = () => {
     const skills = [
         {
             name: 'PHP',
-            html: <SVG_Php />,
+            img: <SVG_Php />,
         },
         {
             name: 'SQL',
-            html: <SVG_Sql />,
+            img: <SVG_Sql />,
         },
     ];
 
@@ -29,11 +29,11 @@ const MainView = () => {
                             <div key={skill.name} className='w-full flex justify-between'>
                                 <div className='flex space-x-5'>
                                     <div className='w-10 bg-blue rounded-l-xl'></div>
-                                    <span className='text-rem48 font-500 tracking-wider text-blue text-base uppercase'>
+                                    <span className='text-rem48 font-500 tracking-wider text-blue text-base'>
                                         {skill.name}
                                     </span>
                                 </div>
-                                <div>{skill.html}</div>
+                                <div>{skill.img}</div>
                             </div>
                         ))}
                     </div>

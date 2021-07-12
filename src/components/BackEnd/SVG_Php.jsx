@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from '../../constant/gsap';
 
 const Php = () => {
     return (
@@ -54,7 +55,7 @@ const Php = () => {
     );
 };
 
-const PhpElephpant = () => {
+const PhpElephant = () => {
     return (
         <svg viewBox='0 0 480 329' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <path
@@ -495,13 +496,45 @@ const PhpElephpant = () => {
 };
 
 const SVG_Php = () => {
+    const section = useRef(null);
+    const php = useRef(null);
+    const phpElephant = useRef(null);
+
+    useEffect(() => {
+        const defaults = {
+            opacity: 0,
+            duration: 0.5,
+            ease: 'back.out(1.2)',
+        };
+        const scrollTrigger = {
+            trigger: section.current,
+            start: 'top 60%',
+            end: 'bottom top',
+            toggleActions: 'restart none none reverse',
+        };
+        const scrollTl = gsap.timeline({ defaults, scrollTrigger });
+        scrollTl
+            .from(php.current, {
+                x: -20,
+                duration: 0.5,
+            })
+            .from(
+                phpElephant.current,
+                {
+                    x: 20,
+                    duration: 0.5,
+                },
+                '-=.3'
+            );
+    }, []);
+
     return (
-        <div className='w-256 h-110 relative'>
-            <figure className='w-150 absolute top-0 left-0'>
+        <div className='w-180 laptop:w-256 h-110 relative' ref={section}>
+            <figure className='w-120 laptop:w-150 absolute top-0 left-0' ref={php}>
                 <Php />
             </figure>
-            <figure className='w-120 absolute bottom-0 right-0'>
-                <PhpElephpant />
+            <figure className='w-90 laptop:w-120 absolute bottom-0 right-0' ref={phpElephant}>
+                <PhpElephant />
             </figure>
         </div>
     );

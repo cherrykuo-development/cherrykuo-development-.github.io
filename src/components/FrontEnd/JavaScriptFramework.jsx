@@ -15,7 +15,7 @@ const Item = ({ item, index }) => {
             </div>
             <div className='w-120 laptop:w-150 bg-white rounded-xl px-5 laptop:px-10 pt-5 flex flex-col'>
                 <div className='w-full bg-blue box-shadow rounded-xl flex-center py-2 laptop:py-0'>
-                    <span className='text-rem48 font-500 tracking-wider text-white text-base uppercase'>
+                    <span className='text-rem48 font-500 tracking-wider text-white text-base'>
                         {item.title}
                     </span>
                 </div>
@@ -24,7 +24,7 @@ const Item = ({ item, index }) => {
                         {item.contents.map(content => (
                             <li
                                 key={content}
-                                className='text-rem32 font-500 tracking-wide laptop:tracking-wider leading-normal text-black-dark text-base uppercase text-center'
+                                className='text-rem32 font-500 tracking-wide laptop:tracking-wider leading-normal text-black-dark text-base text-center'
                             >
                                 - {content} -
                             </li>

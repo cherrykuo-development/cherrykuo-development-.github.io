@@ -43,6 +43,10 @@ module.exports = {
             white: {
                 DEFAULT: '#ffffff',
             },
+            purple: {
+                light: '#8B9DD7',
+                DEFAULT: '#777BB3',
+            },
             blue: {
                 light: '#bbeffd',
                 DEFAULT: '#0167A1',
@@ -68,12 +72,17 @@ module.exports = {
                 36: '36px',
             },
             width: {
+                50: '12.5rem',
+                70: '17.5rem',
+                90: '22.5rem',
                 100: '25rem',
                 105: '26.25rem',
                 120: '30rem',
                 130: '32.5rem',
                 150: '37.5rem',
                 160: '40rem',
+                180: '45rem',
+                232: '58rem',
                 256: '64rem',
                 260: '65rem',
                 280: '70rem',

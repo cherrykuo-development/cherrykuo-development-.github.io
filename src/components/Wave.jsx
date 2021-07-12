@@ -1,15 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { gsap } from '../../constant/gsap';
+import { gsap } from '../constant/gsap';
 
-import wave from '../../assets/images/frontend/wave.png';
+import wave from '../assets/images/frontend/wave.png';
 
 const Wave = () => {
-    const getRandomInt = (min, max) => {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min) + min);
-    };
-
     const section = useRef(null);
     const itemEls = useRef(new Array());
 

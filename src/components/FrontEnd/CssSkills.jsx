@@ -14,7 +14,7 @@ const Item = ({ item, index }) => {
             <div className='flex justify-center items-baseline space-x-20'>
                 <figure className='w-100'>{svgList[index]}</figure>
                 <div className='bg-white rounded-xl px-10 laptop:px-20'>
-                    <span className='text-rem48 font-500 tracking-wider text-blue text-base uppercase'>
+                    <span className='text-rem48 font-500 tracking-wider text-blue text-base'>
                         {item.title}
                     </span>
                 </div>
@@ -30,7 +30,7 @@ const Item = ({ item, index }) => {
                     {item.contents.map(content => (
                         <span
                             key={content}
-                            className='text-rem32 font-500 tracking-wider text-white text-base uppercase'
+                            className='text-rem32 font-500 tracking-wider text-white text-base'
                         >
                             。{content}
                         </span>
@@ -45,7 +45,7 @@ const CssSkills = () => {
     const langTrans = useLangTrans();
 
     return (
-        <section className='w-full bg-blue py-20 flex-center'>
+        <section className='w-full bg-blue pt-20 pb-40 flex-center'>
             <div className='max-w-1280 w-11/12 h-full laptop:space-y-6 flex flex-col justify-between relative'>
                 <SectionTitle title={langTrans('frontend.css_skills.title')} color='white' />
                 <ul className='space-y-40'>
